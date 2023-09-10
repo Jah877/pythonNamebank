@@ -1,0 +1,60 @@
+Jahkim Brown-Roopnarine
+ICS 3UO - A
+December 5, 2021
+v.1.6
+
+Unit 6 - Question 1: Namebank
+Python 3.9
+
+This program will initially take an input of five strings from a user, as names, and will store them into a list. After
+taking a list of names from the user, it will display a menu that will give the user a set of options. These options will
+include: displaying all names, editing a name, and adding/deleting a name.
+
+Program Assumptions
+A user is required to have python version 3.6 or higher.
+
+Features of Program
+Aside from the basics of the program: a sorting name function was added to sort names alphanumerically by first name or
+last name. There is also a feature to save name banks into a library where they may be accessed later by the user and
+re-edited. Also the program uses a main menu for navigation, as well as a submenu for option choosing. Instructions have
+been added too.
+
+Restrictions
+Based on tabulation for the name display in the name bank, aesthetically, certain longer names may be displayed awkwardly.
+However, this has no effect on the logic of the code, or its actual functioning - it is merely aesthetic.
+
+A user is unable to input a name with the words 'help', 'main menu', or 'quit' - these are all keywords used in the getInput
+function which handles online documentation and user navigation.
+
+No completely identical names may be repeated twice in a name bank - even after editing a name. However, if the user changes
+the case sensitivity, it is allowed to be inputted. Therfore, a name may appear twice (just not completely identically) -
+I have allowed the user to have this freedom as there may be cases where individuals share names, and the may want a way of
+differenciating their inputs.
+
+When the instructions are displayed at any point, the user must return to the main menu and re-enter their desired location
+in the program. Instructions may only be called at two places: the menu, and after iniating the make a 5 name list function.
+In the 5 name list iniation, if the user says they are unfamiliar with the progam, they will be returned to the main menu rather
+than returned to where they left off. This is okay, as the user is told as much, and it assures that the user genuinely understands
+instruction by forcing rentry and renavigation.
+
+The Library contains all name banks made throughout a run, and is stored to a dictionary in memory. However, if the user is
+to terminate the code and rerun it, it will not be stored to computer memory or into an external database - so the library
+only corresponds with saved data in a run of the program.
+
+Once name banks are saved in the library - they can not be deleted - but they may be overwritten. If any point a user wants
+to force quit a name bank from being saved, they may type main menu and that will discard all their current edits. If it
+is a new name bank, it will be deleted. If it is an old one that is being re-edited, changes will be saved even if main menu
+is typed. Entire name banks may change, if the user wishes to rewrite accordingly. A delete from library tool is not necessarily
+needed as the user may always choose to overwrite it. Additionally if users make changes to a name bank through library, and upon save do not
+name them identically to the name bank they were editing, data will not be overwritten, but instead a new name bank is saved
+to library from old inputs. Note however: this is intentionally done for editing history to be present to the user, it still must be mentioned
+to avoid confusion.
+
+Known Errors
+When removing a name, the user must have at least one name remaining in the namebank before removal. If the user is to
+attempt to remove a name after the last remaining name in a name bank, they will enter a continuous loop where an error
+is given to the user. However, the user can escape this sequence by entering main menu, which will return them to the main
+menu and will allow them to reenter the names inputted into their name bank.
+
+No Implementation Details
+No additional Files needed to Run Program
